@@ -1,0 +1,13 @@
+[Unit]
+Description=populate wp
+ConditionPathExists=!/var/www/html/index.php
+After=mariadb
+
+[Service]
+#I know, I know ....just need to get back to the family
+ExecStartPre=sleep 10
+ExecStart=/etc/wp-setup.sh
+
+[Install]
+WantedBy=multi-user.target
+

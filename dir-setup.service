@@ -1,0 +1,13 @@
+[Unit]
+Description=populate /var contents
+ConditionPathExists=!/var/www/html
+Before=mariadb
+
+[Service]
+#I know, I know ....just need to get back to the family
+ExecStartPre=
+ExecStart=/etc/dir-setup.sh
+
+[Install]
+WantedBy=multi-user.target
+
