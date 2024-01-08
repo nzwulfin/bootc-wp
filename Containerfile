@@ -1,5 +1,7 @@
 #FROM quay.io/centos-bootc/centos-bootc:stream9
-FROM quay.io/centos-bootc/fedora-bootc:eln
+#FROM quay.io/centos-bootc/fedora-bootc:eln
+FROM quay.io/centos-bootc/centos-bootc-dev:stream9
+
 
 RUN dnf -y install httpd mariadb mariadb-server php-fpm php-mysqlnd && rm /var/log/*.log /var/lib/dnf -rf
 
