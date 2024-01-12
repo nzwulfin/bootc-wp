@@ -1,4 +1,6 @@
 #!/bin/bash
+sed -i "s/80/8080/" /etc/httpd/conf/httpd.conf
+
 mariadb -u root <<-EOF
 CREATE DATABASE wp DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 GRANT ALL ON wp.* TO 'wpuser'@'localhost' IDENTIFIED BY 'redhat';
