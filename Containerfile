@@ -7,7 +7,7 @@ ADD core.conf /usr/lib/sysusers.d/
 ADD wp-setup.service dir-setup.service /etc/systemd/system/
 ADD --chmod=755 wp-setup.sh dir-setup.sh /etc
 ADD lamp.local-2023-03-09-0123.sql /etc
-ADD wp.tgz /etc/www
+ADD wp.tar.gz /etc/www
 
 RUN systemctl enable dir-setup wp-setup httpd mariadb php-fpm
 
